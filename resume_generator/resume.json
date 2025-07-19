@@ -1,0 +1,32 @@
+{
+    "personal": {
+        "name": "John Doe",
+        "email": "john.doe@example.com",
+        "phone": "123-456-7890",
+        "address": "123 Main St, Anytown, USA"
+    },
+    "education": [
+        {
+            "degree": "Bachelor of Science",
+            "major": "Computer Science",
+            "institution": "University of Example",
+            "year": "2015-2019"
+        }
+    ],
+    "experience": [
+        {
+            "title": "Software Engineer",
+            "company": "Tech Corp",
+            "location": "Anytown, USA",
+            "start_date": "2019",
+            "end_date": "Present",
+            "description": "Developed web applications using Python and JavaScript."
+        }
+    ],
+    "skills": [
+        "Python",
+        "JavaScript",
+        "HTML/CSS",
+        "SQL"
+    ]
+}
