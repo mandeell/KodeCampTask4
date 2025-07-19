@@ -21,3 +21,47 @@ def load_student(name):
     else:
         print(f"No data found for student {name}")
         return None
+
+def add_student():
+    name = input("Enter student's name: ")
+    filename = os.path.join(DATA_DIR, f"{name.lower().replace(' ', '_')}.json")
+    if os.path.exists(filename):
+        print(f"Student {name} already exists. Use update to modify.")
+        return
+    student = Student(name)
+    while True:
+        subject = input("Enter subject (or 'done' to finish): ")
+        if subject.lower() == 'done':
+            break
+        score = float(input(f"Enter score for {subject}: "))
+        student.add_score(subject.title(), score)
+    save_student(student)
+    print(f"Student {name} added successfully.")
+
+def view_student():
+    name = input("Enter student's name: ")
+    student = load_student(name)
+    if student:
+        print(f"Student: {student.name}")
+        print("Subjects and Scores:")
+        for subject, score in student.scores.items():
+            print(f"{subject}: {score}")
+        print(f"Average: {student.average:.2f}")
+        print(f"Grade: {student.grade}")
+    else:
+        print(f"Student {name} not found.")
+
+def update_student():
+    name = input("Enter student's name: ")
+    student = load_student(name)
+    if not student:
+        print(f"Student {name} not found.")
+        return
+    while True:
+        subject = input("Enter subject to update/add (or 'done' to finish): ")
+        if subject.lower() == 'done':
+            break
+        score = float(input(f"Enter new score for {subject}: "))
+        student.add_score(subject.title(), score)
+    save_student(student)
+    print(f"Student {name} updated successfully.")
