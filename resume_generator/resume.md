@@ -1,0 +1,26 @@
+# John Doe
+
+john.doe@example.com | 123-456-7890
+
+123 Main St, Anytown, USA
+
+
+## Education
+
+- **Bachelor of Science in Computer Science**, University of Example, 2015-2019
+
+## Work Experience
+
+### Software Engineer at Tech Corp, Anytown, USA
+
+2019 - Present
+
+Developed web applications using Python and JavaScript.
+
+
+## Skills
+
+- Python
+- JavaScript
+- HTML/CSS
+- SQL
