@@ -37,5 +37,16 @@ def main():
             if not os.path.exists(dest_path):
                 os.makedirs(dest_path)
 
+            # Check if file already exists in destination
+            if os.path.exists(os.path.join(dest_path, filename)):
+                print(f"File {filename} already exists in {dest_folder}. Skipping.")
+            else:
+                # Move the file with error handling
+                try:
+                    shutil.move(file_path, os.path.join(dest_path, filename))
+                    print(f"Moved {filename} to {dest_folder}")
+                except Exception as e:
+                    print(f"Error moving {filename}: {str(e)}")
+
 if __name__ == "__main__":
     main()
