@@ -65,3 +65,25 @@ def update_student():
         student.add_score(subject.title(), score)
     save_student(student)
     print(f"Student {name} updated successfully.")
+
+def main():
+    while True:
+        print("\nStudent Report Card App")
+        print("1. Add Student")
+        print("2. View Student")
+        print("3. Update Student")
+        print("4. Exit")
+        choice = input("Enter choice: ")
+        if choice == '1':
+            add_student()
+        elif choice == '2':
+            view_student()
+        elif choice == '3':
+            update_student()
+        elif choice == '4':
+            break
+        else:
+            print("Invalid choice. Try again.")
+
+if __name__ == '__main__':
+    main()
