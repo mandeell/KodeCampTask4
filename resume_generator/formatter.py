@@ -15,7 +15,7 @@ def format_experience(experience):
     exp_str = "Work Experience\n"
     for exp in experience:
         exp_str += f"{exp.get('title', 'N/A')} at {exp.get('company', 'N/A')}, {exp.get('location', 'N/A')}\n"
-        exp_str += f"{exp.get('start_date', 'N/A')} - {expVim exp.get('end_date', 'N/A')}\n"
+        exp_str += f"{exp.get('start_date', 'N/A')} - {exp.get('end_date', 'N/A')}\n"
         exp_str += f"{exp.get('description', 'N/A')}\n\n"
     return exp_str
 
